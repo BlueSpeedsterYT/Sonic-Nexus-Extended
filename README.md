@@ -5,9 +5,9 @@ Without assets from the game, this decompilation will not run. You can download 
 
 # Additional Tweaks
 * Added a built in mod loader, allowing to easily create and play mods.
-* There is now a `settings.ini` file that the game uses to load all settings, similar to Sonic Mania.
+* There is now a `settings.ini` file that the game uses to load all settings, similar to Sonic Mania (Plus).
 * Dev menu can now be accessed from anywhere by pressing the `ESC` key if enabled in the config.
-* The `F12` pause, `F11` step over & fast forward debug features from Sonic Mania have all been ported and are enabled if `devMenu` is enabled in the config.
+* The `F12` pause, `F11` step over & fast forward debug features from Sonic Mania (Plus) have all been ported and are enabled if `devMenu` is enabled in the config.
 
 # How to build
 ## Windows
