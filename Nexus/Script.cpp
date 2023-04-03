@@ -95,12 +95,12 @@ const char variableNames[][0x20] = {
     "TempValue6",
     "TempValue7",
     "CheckResult",
+    "ArrayPos0",
+    "ArrayPos1",
     "Screen.CenterX",
     "Screen.CenterY",
     "Screen.SizeX",
     "Screen.SizeY",
-    "ArrayPos0",
-    "ArrayPos1",
     "KeyDown.Up",
     "KeyDown.Down",
     "KeyDown.Left",
@@ -362,6 +362,10 @@ enum ScrVariable {
     VAR_CHECKRESULT,
     VAR_ARRAYPOS0,
     VAR_ARRAYPOS1,
+    VAR_SCREENCENTERX,
+    VAR_SCREENCENTERY,
+    VAR_SCREENSIZEX,
+    VAR_SCREENSIZEY,
     VAR_KEYDOWNUP,
     VAR_KEYDOWNDOWN,
     VAR_KEYDOWNLEFT,
@@ -1543,6 +1547,10 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub)
                     case VAR_CHECKRESULT: scriptEng.operands[i] = scriptEng.checkResult; break;
                     case VAR_ARRAYPOS0: scriptEng.operands[i] = scriptEng.arrayPosition[0]; break;
                     case VAR_ARRAYPOS1: scriptEng.operands[i] = scriptEng.arrayPosition[1]; break;
+                    case VAR_SCREENCENTERX: scriptEng.operands[i] = SCREEN_CENTERX; break;
+                    case VAR_SCREENCENTERY: scriptEng.operands[i] = SCREEN_CENTERY; break;
+                    case VAR_SCREENSIZEX: scriptEng.operands[i] = SCREEN_XSIZE; break;
+                    case VAR_SCREENSIZEY: scriptEng.operands[i] = SCREEN_YSIZE; break;
                     case VAR_KEYDOWNUP: scriptEng.operands[i] = keyDown.up; break;
                     case VAR_KEYDOWNDOWN: scriptEng.operands[i] = keyDown.down; break;
                     case VAR_KEYDOWNLEFT: scriptEng.operands[i] = keyDown.left; break;
@@ -2683,6 +2691,10 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub)
                     case VAR_CHECKRESULT: scriptEng.checkResult = scriptEng.operands[i]; break;
                     case VAR_ARRAYPOS0: scriptEng.arrayPosition[0] = scriptEng.operands[i]; break;
                     case VAR_ARRAYPOS1: scriptEng.arrayPosition[1] = scriptEng.operands[i]; break;
+                    case VAR_SCREENCENTERX: break;
+                    case VAR_SCREENCENTERY: break;
+                    case VAR_SCREENSIZEX: break;
+                    case VAR_SCREENSIZEY: break;
                     case VAR_KEYDOWNUP: keyDown.up = scriptEng.operands[i]; break;
                     case VAR_KEYDOWNDOWN: keyDown.down = scriptEng.operands[i]; break;
                     case VAR_KEYDOWNLEFT: keyDown.left = scriptEng.operands[i]; break;
