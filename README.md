@@ -1,4 +1,5 @@
 # Sonic Nexus Extended
+
 [WARNING: Unless you do plan on supporting the project, please do not download the source code and attempt to build it, as content from development could potentially result into failure and an unstable build of Nexus Extended ready. Be sure to always download the latest stable version as its available from the Releases tab.]
 
 This is a modified version of the Sonic Nexus (2008) Decompiliation.
