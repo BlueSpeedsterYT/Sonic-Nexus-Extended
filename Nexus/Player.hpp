@@ -117,7 +117,7 @@ extern ushort rightBuffer;
 extern ushort jumpPressBuffer;
 extern ushort jumpHoldBuffer;
 
-void LoadPlayerFromList(byte characterID, byte playerID);
+void LoadPlayerFromList(byte characterID, int playerID);
 
 void ProcessPlayerAnimationChange(Player *player);
 void DrawPlayer(Player *player, SpriteFrame *frame);
