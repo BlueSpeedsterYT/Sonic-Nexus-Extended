@@ -12,7 +12,7 @@ ushort rightBuffer     = 0;
 ushort jumpPressBuffer = 0;
 ushort jumpHoldBuffer  = 0;
 
-void LoadPlayerFromList(byte characterID, byte playerID)
+void LoadPlayerFromList(byte characterID, int playerID)
 {
     FileInfo info;
     char strBuf[0x100];
