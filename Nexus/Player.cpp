@@ -79,6 +79,7 @@ void LoadPlayerFromList(byte characterID, int playerID)
 
             if (characterID == p) {
                 GetFileInfo(&info);
+                activePlayerCount += 1;
                 CloseFile();
                 LoadPlayerAnimation(strBuf, playerID);
                 SetFileInfo(&info);
