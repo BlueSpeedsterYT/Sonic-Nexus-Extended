@@ -24,8 +24,6 @@ int xScrollB       = SCREEN_XSIZE;
 int yScrollMove    = 0;
 int earthquakeX    = 0;
 int earthquakeY    = 0;
-int cameraXPos     = 0;
-int cameraYPos     = 0;
 int cameraLag      = 0;
 
 int xBoundary1    = 0;
@@ -91,8 +89,6 @@ void ProcessStage(void)
             fadeMode = 0;
 
             cameraEnabled = true;
-            cameraXPos    = 0;
-            cameraYPos    = 0;
             cameraAdjustY = 0;
             xScrollOffset = 0;
             yScrollOffset = 0;
@@ -1057,8 +1053,6 @@ void SetPlayerScreenPosition(Player *player)
             earthquakeY = -earthquakeY;
         }
     }
-    cameraXPos = playerXPos;
-    cameraYPos = playerYPos;
 }
 void SetPlayerScreenPositionCDStyle(Player *player)
 {
@@ -1247,8 +1241,6 @@ void SetPlayerScreenPositionCDStyle(Player *player)
             earthquakeY = -earthquakeY;
         }
     }
-    cameraXPos = playerXPos;
-    cameraYPos = playerYPos;
 }
 void SetPlayerHLockedScreenPosition(Player *player)
 {
@@ -1370,8 +1362,6 @@ void SetPlayerHLockedScreenPosition(Player *player)
         }
     }
     player->screenYPos -= cameraAdjustY;
-    cameraXPos = playerXPos;
-    cameraYPos = playerYPos;
 }
 void SetPlayerLockedScreenPosition(Player *player)
 {
@@ -1426,7 +1416,4 @@ void SetPlayerLockedScreenPosition(Player *player)
             earthquakeY = -earthquakeY;
         }
     }
-    
-    cameraXPos = playerXPos;
-    cameraYPos = playerYPos;
 }

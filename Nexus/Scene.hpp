@@ -129,8 +129,6 @@ extern int xScrollB;
 extern int yScrollMove;
 extern int earthquakeX;
 extern int earthquakeY;
-extern int cameraXPos;
-extern int cameraYPos;
 extern int cameraLag;
 
 extern int xBoundary1;
