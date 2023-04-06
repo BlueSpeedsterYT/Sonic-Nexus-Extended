@@ -123,6 +123,25 @@ const char variableNames[][0x20] = {
     "CheckResult",
     "ArrayPos0",
     "ArrayPos1",
+	"ArrayPos2",
+    "ArrayPos3",
+    "ArrayPos4",
+    "ArrayPos5",
+    "ArrayPos6",
+    "ArrayPos7",
+    "ArrayPos8",
+    "ArrayPos9",
+    "ArrayPos10",
+    "ArrayPos11",
+    "ArrayPos12",
+    "ArrayPos13",
+    "ArrayPos14",
+    "ArrayPos15",
+    "ArrayPos16",
+    "ArrayPos17",
+    "ArrayPos18",
+    "ArrayPos19",
+    "ArrayPos20",
     "Screen.CenterX",
     "Screen.CenterY",
     "Screen.SizeX",
@@ -414,6 +433,25 @@ enum ScrVariable {
     VAR_CHECKRESULT,
     VAR_ARRAYPOS0,
     VAR_ARRAYPOS1,
+	VAR_ARRAYPOS2,
+    VAR_ARRAYPOS3,
+    VAR_ARRAYPOS4,
+    VAR_ARRAYPOS5,
+    VAR_ARRAYPOS6,
+    VAR_ARRAYPOS7,
+    VAR_ARRAYPOS8,
+    VAR_ARRAYPOS9,
+    VAR_ARRAYPOS10,
+    VAR_ARRAYPOS11,
+    VAR_ARRAYPOS12,
+    VAR_ARRAYPOS13,
+    VAR_ARRAYPOS14,
+    VAR_ARRAYPOS15,
+    VAR_ARRAYPOS16,
+    VAR_ARRAYPOS17,
+    VAR_ARRAYPOS18,
+    VAR_ARRAYPOS19,
+    VAR_ARRAYPOS20,
     VAR_SCREENCENTERX,
     VAR_SCREENCENTERY,
     VAR_SCREENSIZEX,
@@ -920,8 +958,46 @@ void ConvertFunctionText(char *text)
                             value = 0;
                         if (StrComp(strBuffer, "ArrayPos1"))
                             value = 1;
-                        if (StrComp(strBuffer, "TempObjectPos"))
+						if (StrComp(strBuffer, "ArrayPos2"))
                             value = 2;
+                        if (StrComp(strBuffer, "ArrayPos3"))
+                            value = 3;
+						if (StrComp(strBuffer, "ArrayPos4"))
+                            value = 4;
+                        if (StrComp(strBuffer, "ArrayPos5"))
+                            value = 5;
+						if (StrComp(strBuffer, "ArrayPos6"))
+                            value = 6;
+                        if (StrComp(strBuffer, "ArrayPos7"))
+                            value = 7;
+						if (StrComp(strBuffer, "ArrayPos8"))
+                            value = 8;
+                        if (StrComp(strBuffer, "ArrayPos9"))
+                            value = 9;
+						if (StrComp(strBuffer, "ArrayPos10"))
+                            value = 10;
+                        if (StrComp(strBuffer, "ArrayPos11"))
+                            value = 11;
+						if (StrComp(strBuffer, "ArrayPos12"))
+                            value = 12;
+                        if (StrComp(strBuffer, "ArrayPos13"))
+                            value = 13;
+						if (StrComp(strBuffer, "ArrayPos14"))
+                            value = 14;
+                        if (StrComp(strBuffer, "ArrayPos15"))
+                            value = 15;
+						if (StrComp(strBuffer, "ArrayPos16"))
+                            value = 16;
+                        if (StrComp(strBuffer, "ArrayPos17"))
+                            value = 17;
+						if (StrComp(strBuffer, "ArrayPos18"))
+                            value = 18;
+                        if (StrComp(strBuffer, "ArrayPos19"))
+                            value = 19;
+						if (StrComp(strBuffer, "ArrayPos20"))
+                            value = 20;
+                        if (StrComp(strBuffer, "TempObjectPos"))
+                            value = 21;
                         scriptData[scriptDataPos++] = 1;
                         scriptData[scriptDataPos++] = value;
                     }
@@ -1664,6 +1740,25 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub)
                     case VAR_CHECKRESULT: scriptEng.operands[i] = scriptEng.checkResult; break;
                     case VAR_ARRAYPOS0: scriptEng.operands[i] = scriptEng.arrayPosition[0]; break;
                     case VAR_ARRAYPOS1: scriptEng.operands[i] = scriptEng.arrayPosition[1]; break;
+					case VAR_ARRAYPOS2: scriptEng.operands[i] = scriptEng.arrayPosition[2]; break;
+                    case VAR_ARRAYPOS3: scriptEng.operands[i] = scriptEng.arrayPosition[3]; break;
+                    case VAR_ARRAYPOS4: scriptEng.operands[i] = scriptEng.arrayPosition[4]; break;
+                    case VAR_ARRAYPOS5: scriptEng.operands[i] = scriptEng.arrayPosition[5]; break;
+                    case VAR_ARRAYPOS6: scriptEng.operands[i] = scriptEng.arrayPosition[6]; break;
+                    case VAR_ARRAYPOS7: scriptEng.operands[i] = scriptEng.arrayPosition[7]; break;
+                    case VAR_ARRAYPOS8: scriptEng.operands[i] = scriptEng.arrayPosition[8]; break;
+                    case VAR_ARRAYPOS9: scriptEng.operands[i] = scriptEng.arrayPosition[9]; break;
+                    case VAR_ARRAYPOS10: scriptEng.operands[i] = scriptEng.arrayPosition[10]; break;
+                    case VAR_ARRAYPOS11: scriptEng.operands[i] = scriptEng.arrayPosition[11]; break;
+                    case VAR_ARRAYPOS12: scriptEng.operands[i] = scriptEng.arrayPosition[12]; break;
+                    case VAR_ARRAYPOS13: scriptEng.operands[i] = scriptEng.arrayPosition[13]; break;
+                    case VAR_ARRAYPOS14: scriptEng.operands[i] = scriptEng.arrayPosition[14]; break;
+                    case VAR_ARRAYPOS15: scriptEng.operands[i] = scriptEng.arrayPosition[15]; break;
+                    case VAR_ARRAYPOS16: scriptEng.operands[i] = scriptEng.arrayPosition[16]; break;
+                    case VAR_ARRAYPOS17: scriptEng.operands[i] = scriptEng.arrayPosition[17]; break;
+                    case VAR_ARRAYPOS18: scriptEng.operands[i] = scriptEng.arrayPosition[18]; break;
+                    case VAR_ARRAYPOS19: scriptEng.operands[i] = scriptEng.arrayPosition[19]; break;
+                    case VAR_ARRAYPOS20: scriptEng.operands[i] = scriptEng.arrayPosition[20]; break;
                     case VAR_SCREENCENTERX: scriptEng.operands[i] = SCREEN_CENTERX; break;
                     case VAR_SCREENCENTERY: scriptEng.operands[i] = SCREEN_CENTERY; break;
                     case VAR_SCREENSIZEX: scriptEng.operands[i] = SCREEN_XSIZE; break;
@@ -2873,6 +2968,25 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub)
                     case VAR_CHECKRESULT: scriptEng.checkResult = scriptEng.operands[i]; break;
                     case VAR_ARRAYPOS0: scriptEng.arrayPosition[0] = scriptEng.operands[i]; break;
                     case VAR_ARRAYPOS1: scriptEng.arrayPosition[1] = scriptEng.operands[i]; break;
+					case VAR_ARRAYPOS2: scriptEng.arrayPosition[2] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS3: scriptEng.arrayPosition[3] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS4: scriptEng.arrayPosition[4] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS5: scriptEng.arrayPosition[5] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS6: scriptEng.arrayPosition[6] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS7: scriptEng.arrayPosition[7] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS8: scriptEng.arrayPosition[8] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS9: scriptEng.arrayPosition[9] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS10: scriptEng.arrayPosition[10] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS11: scriptEng.arrayPosition[11] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS12: scriptEng.arrayPosition[12] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS13: scriptEng.arrayPosition[13] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS14: scriptEng.arrayPosition[14] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS15: scriptEng.arrayPosition[15] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS16: scriptEng.arrayPosition[16] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS17: scriptEng.arrayPosition[17] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS18: scriptEng.arrayPosition[18] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS19: scriptEng.arrayPosition[19] = scriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS20: scriptEng.arrayPosition[20] = scriptEng.operands[i]; break;
                     case VAR_SCREENCENTERX: break;
                     case VAR_SCREENCENTERY: break;
                     case VAR_SCREENSIZEX: break;
