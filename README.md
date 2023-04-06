@@ -39,4 +39,4 @@ This will require the player to have a copy of the assets from the originial Son
 Currently the only supported platforms are the ones listed above, however the backend uses libogg, libvorbis, libtheora & SDL2 to power it, so the codebase is very multiplatform. If you're able to, you can clone this repo and port it to a platform not on the list.
 
 # Contact:
-Join the [Retro Engine Modding Discord Server](https://dc.railgun.works/retroengine) for any extra questions you may need to know about the original Nexus decompilation or modding Nexus, alongside support for other Retro Engine games and decomps.
+Join the [Retro Engine Modding Discord Server](https://dc.railgun.works/retroengine) for any extra questions you may need to know about the original Nexus decompilation or modding Nexus, alongside support for other Retro Engine games and decomps. (But don't ask for a Origins Sonic 3 decomp... At all...)
