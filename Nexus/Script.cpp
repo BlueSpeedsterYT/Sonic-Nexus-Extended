@@ -63,7 +63,7 @@ struct FunctionInfo {
     int opcodeSize;
 };
 
-const char variableNames[][0x20] = {
+const char variableNames[][0x32] = {
     "Object.Type",
     "Object.PropertyValue",
     "Object.XPos",
