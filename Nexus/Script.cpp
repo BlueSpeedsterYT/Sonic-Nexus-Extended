@@ -123,7 +123,7 @@ const char variableNames[][0x20] = {
     "CheckResult",
     "ArrayPos0",
     "ArrayPos1",
-	"ArrayPos2",
+    "ArrayPos2",
     "ArrayPos3",
     "ArrayPos4",
     "ArrayPos5",
@@ -433,7 +433,7 @@ enum ScrVariable {
     VAR_CHECKRESULT,
     VAR_ARRAYPOS0,
     VAR_ARRAYPOS1,
-	VAR_ARRAYPOS2,
+    VAR_ARRAYPOS2,
     VAR_ARRAYPOS3,
     VAR_ARRAYPOS4,
     VAR_ARRAYPOS5,
@@ -958,7 +958,7 @@ void ConvertFunctionText(char *text)
                             value = 0;
                         if (StrComp(strBuffer, "ArrayPos1"))
                             value = 1;
-						if (StrComp(strBuffer, "ArrayPos2"))
+                        if (StrComp(strBuffer, "ArrayPos2"))
                             value = 2;
                         if (StrComp(strBuffer, "ArrayPos3"))
                             value = 3;
@@ -1740,7 +1740,7 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub)
                     case VAR_CHECKRESULT: scriptEng.operands[i] = scriptEng.checkResult; break;
                     case VAR_ARRAYPOS0: scriptEng.operands[i] = scriptEng.arrayPosition[0]; break;
                     case VAR_ARRAYPOS1: scriptEng.operands[i] = scriptEng.arrayPosition[1]; break;
-					case VAR_ARRAYPOS2: scriptEng.operands[i] = scriptEng.arrayPosition[2]; break;
+                    case VAR_ARRAYPOS2: scriptEng.operands[i] = scriptEng.arrayPosition[2]; break;
                     case VAR_ARRAYPOS3: scriptEng.operands[i] = scriptEng.arrayPosition[3]; break;
                     case VAR_ARRAYPOS4: scriptEng.operands[i] = scriptEng.arrayPosition[4]; break;
                     case VAR_ARRAYPOS5: scriptEng.operands[i] = scriptEng.arrayPosition[5]; break;

@@ -2,9 +2,11 @@
 
 int SCREEN_XSIZE   = (320);
 int SCREEN_CENTERX = (SCREEN_XSIZE / 2);
+int SCREEN_XSIZE_CONFIG = (320);
 
 float SCREEN_XSIZE_F   = (320);
 float SCREEN_CENTERX_F = (SCREEN_XSIZE_F / 2);
+float SCREEN_XSIZE_CONFIG_F = (320);
 
 byte blendLookupTable[0x100 * 0x100];
 
@@ -1637,7 +1639,7 @@ void DrawTintRectangle(int XPos, int YPos, int width, int height, byte tintID)
         height += YPos;
         YPos = 0;
     }
-    if (width <= 0 || height <= 0)
+    if (width < 0 || height < 0)
         return;
 
     byte *tintTable = NULL;
@@ -1652,7 +1654,7 @@ void DrawTintRectangle(int XPos, int YPos, int width, int height, byte tintID)
     int yOffset = SCREEN_XSIZE - width;
     for (byte *pixelBufferPtr = &Engine.pixelBuffer[XPos + SCREEN_XSIZE * YPos];; pixelBufferPtr += yOffset) {
         height--;
-        if (!height)
+        if (height < 0)
             break;
         int w = width;
         while (w--) {
