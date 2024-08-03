@@ -24,7 +24,7 @@ int jumpTableDataOffset = 0;
 
 #define ALIAS_COUNT       (0x100)
 #if !RETRO_USE_ORIGINAL_CODE
-#define COMMONALIAS_COUNT (22)
+#define COMMONALIAS_COUNT (0x100)
 #else
 #define COMMONALIAS_COUNT (14)
 #endif
@@ -2648,6 +2648,19 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub)
                 newEnt->values[5]     = 0;
                 newEnt->values[6]     = 0;
                 newEnt->values[7]     = 0;
+                newEnt->values[8]     = 0;
+                newEnt->values[9]     = 0;
+                newEnt->values[10]    = 0;
+                newEnt->values[11]    = 0;
+                newEnt->values[12]    = 0;
+                newEnt->values[13]    = 0;
+                newEnt->values[14]    = 0;
+                newEnt->values[15]    = 0;
+                newEnt->values[16]    = 0;
+                newEnt->values[17]    = 0;
+                newEnt->values[18]    = 0;
+                newEnt->values[19]    = 0;
+                newEnt->values[20]    = 0;
                 break;
             }
             case FUNC_PLAYEROBJECTCOLLISION:
@@ -2695,6 +2708,19 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub)
                 temp->values[5]     = 0;
                 temp->values[6]     = 0;
                 temp->values[7]     = 0;
+                temp->values[8]     = 0;
+                temp->values[9]     = 0;
+                temp->values[10]    = 0;
+                temp->values[11]    = 0;
+                temp->values[12]    = 0;
+                temp->values[13]    = 0;
+                temp->values[14]    = 0;
+                temp->values[15]    = 0;
+                temp->values[16]    = 0;
+                temp->values[17]    = 0;
+                temp->values[18]    = 0;
+                temp->values[19]    = 0;
+                temp->values[20]    = 0;
                 break;
             }
             case FUNC_DEFAULTGROUNDMOVEMENT: DefaultGroundMovement(&playerList[activePlayer]); break;
@@ -2731,24 +2757,20 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub)
                 opcodeSize = 0;
                 switch (scriptEng.operands[0]) {
                     default: break;
-                    case CSIDE_FLOOR:
-                        ObjectFloorCollision(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]);
-                        break;
-                        case CSIDE_LWALL: ObjectLWallCollision(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
-                        case CSIDE_RWALL: ObjectRWallCollision(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
-                        case CSIDE_ROOF: ObjectRoofCollision(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
+                    case CSIDE_FLOOR: ObjectFloorCollision(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
+                    case CSIDE_LWALL: ObjectLWallCollision(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
+                    case CSIDE_RWALL: ObjectRWallCollision(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
+                    case CSIDE_ROOF: ObjectRoofCollision(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
                 }
                 break;
             case FUNC_OBJECTTILEGRIP:
                 opcodeSize = 0;
                 switch (scriptEng.operands[0]) {
                     default: break;
-                    case CSIDE_FLOOR:
-                        ObjectFloorGrip(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]);
-                        break;
-                        case CSIDE_LWALL: ObjectLWallGrip(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
-                        case CSIDE_RWALL: ObjectRWallGrip(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
-                        case CSIDE_ROOF: ObjectRoofGrip(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
+                    case CSIDE_FLOOR: ObjectFloorGrip(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
+                    case CSIDE_LWALL: ObjectLWallGrip(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
+                    case CSIDE_RWALL: ObjectRWallGrip(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
+                    case CSIDE_ROOF: ObjectRoofGrip(scriptEng.operands[1], scriptEng.operands[2], scriptEng.operands[3]); break;
                 }
                 break;
             case FUNC_LOADVIDEO:
