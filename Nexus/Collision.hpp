@@ -63,6 +63,15 @@ void BoxCollision(int left, int top, int right, int bottom);
 void PlatformCollision(int left, int top, int right, int bottom);
 
 void ObjectFloorCollision(int xOffset, int yOffset, int cPath);
+//These are from RSDKv3, use em wisely
+void ObjectLWallCollision(int xOffset, int yOffset, int cPath);
+void ObjectRoofCollision(int xOffset, int yOffset, int cPath);
+void ObjectRWallCollision(int xOffset, int yOffset, int cPath);
+
 void ObjectFloorGrip(int xOffset, int yOffset, int cPath);
+//These too.
+void ObjectLWallGrip(int xOffset, int yOffset, int cPath);
+void ObjectRoofGrip(int xOffset, int yOffset, int cPath);
+void ObjectRWallGrip(int xOffset, int yOffset, int cPath);
 
 #endif // !COLLISION_H
