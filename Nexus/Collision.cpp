@@ -1445,7 +1445,7 @@ void ObjectFloorCollision(int xOffset, int yOffset, int cPath)
     }
 }
 
-void ObjectLWallCollision(int xOffset, int xOffset, int cPath)
+void ObjectLWallCollision(int xOffset, int yOffset, int cPath)
 {
     scriptEng.checkResult = false;
     Entity *entity        = &objectEntityList[objectLoop];
