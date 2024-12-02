@@ -6,7 +6,6 @@ This is a modified version of the Sonic Nexus (2008) Decompiliation.
 This will require the player to have a copy of the assets from the originial Sonic Nexus release, download is available [here](https://info.sonicretro.org/Sonic_Nexus).
 
 # New Features
-* Allowing support for multiple playable characters (In Development)
 * A new max Value limit of 20. (Not that anyone would use that anyways lmao)
 * A new set of variables to allow the game to run without any issues in either 4:3 or 16:9 (Available, but it is being tested.)
 
