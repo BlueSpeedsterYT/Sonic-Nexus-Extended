@@ -290,7 +290,7 @@ void LoadStageFiles(void) {
         PrintLog("Reloading Scene %s - %s", stageListNames[ActiveStageList], stageList[ActiveStageList][StageListPosition].name);
     }
 
-    for (int i = 0; i < TRACK_COUNT; ++i) SetMusicTrack((char *)"", i, false);
+    for (int i = 0; i < TRACK_COUNT; ++i) SetMusicTrack((char *)"", i, 0, 0);
     for (int i = 0; i < ENTITY_COUNT; ++i) {
         MEM_ZERO(ObjectEntityList[i]);
         ObjectEntityList[i].drawOrder = 3;

@@ -19,6 +19,7 @@
 struct TrackInfo {
     char fileName[0x40];
     bool trackLoop;
+    uint loopPoint;
 };
 
 struct MusicPlaybackInfo {
@@ -33,6 +34,7 @@ struct MusicPlaybackInfo {
     Sint16 *buffer;
     FileInfo fileInfo;
     bool trackLoop;
+    uint loopPoint;
     bool loaded;
 };
 
@@ -108,6 +110,7 @@ inline void freeMusInfo()
         musInfo.stream = nullptr;
 #endif
         musInfo.trackLoop    = false;
+        musInfo.loopPoint    = 0;
         musInfo.loaded       = false;
         musicStatus          = MUSIC_STOPPED;
 
@@ -139,7 +142,7 @@ inline void freeMusInfo()
 #endif
 
 void LoadMusic(void *userdata);
-void SetMusicTrack(char *filePath, byte trackID, bool loop);
+void SetMusicTrack(char *filePath, byte trackID, bool loop, uint loopPoint);
 bool PlayMusic(int track);
 inline void StopMusic()
 {

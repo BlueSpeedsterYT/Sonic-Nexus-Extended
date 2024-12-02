@@ -2646,9 +2646,13 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub) {
                 opcodeSize = 0;
                 ProcessDefaultJumpAction(&PlayerList[PlayerNo]);
                 break;
-            case FUNC_SETMUSICTRACK:
+            case FUNC_SETMUSICTRACK: //This is now based upon the version in RSDKv3 so uhhh... loop points!!!
                 opcodeSize = 0;
-                SetMusicTrack(ScriptText, ScriptEng.operands[1], ScriptEng.operands[2]);
+				if (ScriptEng.operands[2] <= 1)
+                    SetMusicTrack(scriptText, ScriptEng.operands[1], ScriptEng.operands[2], 0);
+                else
+                    SetMusicTrack(ScriptText, ScriptEng.operands[1], true, ScriptEng.operands[2]);
+                break;
                 break;
             case FUNC_PLAYMUSIC:
                 opcodeSize = 0;

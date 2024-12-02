@@ -196,7 +196,7 @@ void ProcessMusicStream(Sint32 *stream, size_t bytes_wanted)
                 if (bytes_read == 0) {
                     // We've reached the end of the file
                     if (musInfo.trackLoop) {
-                        ov_pcm_seek(&musInfo.vorbisFile, 0);
+                        ov_pcm_seek(&musInfo.vorbisFile, musInfo.loopPoint);
                         continue;
                     }
                     else {
@@ -424,6 +424,7 @@ void LoadMusic(void *userdata)
 
     if (LoadFile2(trackPtr->fileName, &musInfo.fileInfo)) {
         musInfo.trackLoop = trackPtr->trackLoop;
+        musInfo.loopPoint = trackPtr->loopPoint;
         musInfo.loaded    = true;
 
         unsigned long long samples = 0;
@@ -464,13 +465,14 @@ void LoadMusic(void *userdata)
     }
 }
 
-void SetMusicTrack(char *filePath, byte trackID, bool loop)
+void SetMusicTrack(char *filePath, byte trackID, bool loop, uint loopPoint)
 {
     LockAudioDevice();
     TrackInfo *track = &musicTracks[trackID];
     StrCopy(track->fileName, "Data/Music/");
     StrAdd(track->fileName, filePath);
     track->trackLoop = loop;
+    track->loopPoint = loopPoint;
     UnlockAudioDevice();
 }
 bool PlayMusic(int track)
