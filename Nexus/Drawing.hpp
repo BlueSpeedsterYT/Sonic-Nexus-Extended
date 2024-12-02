@@ -49,9 +49,7 @@ void ClearScreen(byte index);
 inline void ClearGraphicsData() {
     for (int i = 0; i < SURFACE_MAX; ++i) StrCopy(GfxSurface[i].fileName, "");
     GfxDataPosition = 0;
-#if !RETRO_USE_ORIGINAL_CODE
     MEM_ZERO(GfxSurface);
-#endif
 }
 
 void SetScreenSize(int width, int lineSize);

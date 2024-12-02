@@ -13,9 +13,7 @@ int SinValue256[256];
 int CosValue256[256];
 
 void CalculateTrigAngles() {
-#if !RETRO_USE_ORIGINAL_CODE
     srand(time(NULL));
-#endif
 
     for (int i = 0; i < 0x200; ++i) {
         float Val      = sinf(((float)i / 256) * RSDK_PI);

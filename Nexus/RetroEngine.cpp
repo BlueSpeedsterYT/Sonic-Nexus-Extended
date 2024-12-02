@@ -204,9 +204,7 @@ bool processEvents() {
 
 void RetroEngine::Init() {
     CalculateTrigAngles();
-#if !RETRO_USE_ORIGINAL_CODE
     InitUserdata();
-#endif
 #if RETRO_USE_MOD_LOADER
     InitMods();
 #endif
@@ -254,13 +252,11 @@ void RetroEngine::Run() {
     unsigned long long curTicks   = 0;
 
     while (GameRunning) {
-#if !RETRO_USE_ORIGINAL_CODE
         if (!vsync) {
             if (SDL_GetPerformanceCounter() < curTicks + targetFreq)
                 continue;
             curTicks = SDL_GetPerformanceCounter();
         }
-#endif
         GameRunning = processEvents();
 
         for (int s = 0; s < gameSpeed; ++s) {
@@ -409,7 +405,6 @@ bool RetroEngine::LoadGameConfig(const char *filePath) {
             }
         }
 
-#if !RETRO_USE_ORIGINAL_CODE
         if (strlen(Engine.startSceneFolder) && strlen(Engine.startSceneID)) {
             SceneInfo *scene = &stageList[STAGELIST_BONUS][0xFE]; // slot 0xFF is used for "none" startStage
             strcpy(scene->name, "_RSDK_SCENE");
@@ -418,7 +413,6 @@ bool RetroEngine::LoadGameConfig(const char *filePath) {
             startList_Game  = STAGELIST_BONUS;
             startStage_Game = 0xFE;
         }
-#endif
 
         CloseFile();
         return true;
