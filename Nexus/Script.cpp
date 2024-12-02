@@ -1876,93 +1876,93 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub) {
                         break;
                     }
                     case VAR_OBJECTVALUE8: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[8];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[8];
                         break;
                     }
                     case VAR_OBJECTVALUE9: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[9];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[9];
                         break;
                     }
                     case VAR_OBJECTVALUE10: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[10];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[10];
                         break;
                     }
                     case VAR_OBJECTVALUE11: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[11];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[11];
                         break;
                     }
                     case VAR_OBJECTVALUE12: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[12];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[12];
                         break;
                     }
                     case VAR_OBJECTVALUE13: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[13];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[13];
                         break;
                     }
                     case VAR_OBJECTVALUE14: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[14];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[14];
                         break;
                     }
                     case VAR_OBJECTVALUE15: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[15];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[15];
                         break;
                     }
                     case VAR_OBJECTVALUE16: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[16];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[16];
                         break;
                     }
                     case VAR_OBJECTVALUE17: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[17];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[17];
                         break;
                     }
                     case VAR_OBJECTVALUE18: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[18];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[18];
                         break;
                     }
                     case VAR_OBJECTVALUE19: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[19];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[19];
                         break;
                     }
                     case VAR_OBJECTVALUE20: {
-                        scriptEng.operands[i] = objectEntityList[arrayVal].values[20];
+                        ScriptEng.operands[i] = ObjectEntityList[arrayVal].values[20];
                         break;
                     }
-                    case VAR_TEMPVALUE8: scriptEng.operands[i] = scriptEng.tempValue[8]; break;
-                    case VAR_TEMPVALUE9: scriptEng.operands[i] = scriptEng.tempValue[9]; break;
-                    case VAR_TEMPVALUE10: scriptEng.operands[i] = scriptEng.tempValue[10]; break;
-                    case VAR_TEMPVALUE11: scriptEng.operands[i] = scriptEng.tempValue[11]; break;
-                    case VAR_TEMPVALUE12: scriptEng.operands[i] = scriptEng.tempValue[12]; break;
-                    case VAR_TEMPVALUE13: scriptEng.operands[i] = scriptEng.tempValue[13]; break;
-                    case VAR_TEMPVALUE14: scriptEng.operands[i] = scriptEng.tempValue[14]; break;
-                    case VAR_TEMPVALUE15: scriptEng.operands[i] = scriptEng.tempValue[15]; break;
-                    case VAR_TEMPVALUE16: scriptEng.operands[i] = scriptEng.tempValue[16]; break;
-                    case VAR_TEMPVALUE17: scriptEng.operands[i] = scriptEng.tempValue[17]; break;
-                    case VAR_TEMPVALUE18: scriptEng.operands[i] = scriptEng.tempValue[18]; break;
-                    case VAR_TEMPVALUE19: scriptEng.operands[i] = scriptEng.tempValue[19]; break;
-                    case VAR_TEMPVALUE20: scriptEng.operands[i] = scriptEng.tempValue[20]; break;
-                    case VAR_ARRAYPOS2: scriptEng.operands[i] = scriptEng.arrayPosition[2]; break;
-                    case VAR_ARRAYPOS3: scriptEng.operands[i] = scriptEng.arrayPosition[3]; break;
-                    case VAR_ARRAYPOS4: scriptEng.operands[i] = scriptEng.arrayPosition[4]; break;
-                    case VAR_ARRAYPOS5: scriptEng.operands[i] = scriptEng.arrayPosition[5]; break;
-                    case VAR_ARRAYPOS6: scriptEng.operands[i] = scriptEng.arrayPosition[6]; break;
-                    case VAR_ARRAYPOS7: scriptEng.operands[i] = scriptEng.arrayPosition[7]; break;
-                    case VAR_ARRAYPOS8: scriptEng.operands[i] = scriptEng.arrayPosition[8]; break;
-                    case VAR_ARRAYPOS9: scriptEng.operands[i] = scriptEng.arrayPosition[9]; break;
-                    case VAR_ARRAYPOS10: scriptEng.operands[i] = scriptEng.arrayPosition[10]; break;
-                    case VAR_ARRAYPOS11: scriptEng.operands[i] = scriptEng.arrayPosition[11]; break;
-                    case VAR_ARRAYPOS12: scriptEng.operands[i] = scriptEng.arrayPosition[12]; break;
-                    case VAR_ARRAYPOS13: scriptEng.operands[i] = scriptEng.arrayPosition[13]; break;
-                    case VAR_ARRAYPOS14: scriptEng.operands[i] = scriptEng.arrayPosition[14]; break;
-                    case VAR_ARRAYPOS15: scriptEng.operands[i] = scriptEng.arrayPosition[15]; break;
-                    case VAR_ARRAYPOS16: scriptEng.operands[i] = scriptEng.arrayPosition[16]; break;
-                    case VAR_ARRAYPOS17: scriptEng.operands[i] = scriptEng.arrayPosition[17]; break;
-                    case VAR_ARRAYPOS18: scriptEng.operands[i] = scriptEng.arrayPosition[18]; break;
-                    case VAR_ARRAYPOS19: scriptEng.operands[i] = scriptEng.arrayPosition[19]; break;
-                    case VAR_ARRAYPOS20: scriptEng.operands[i] = scriptEng.arrayPosition[20]; break;
-                    case VAR_SCREENCENTERX: scriptEng.operands[i] = SCREEN_CENTERX; break;
-                    case VAR_SCREENCENTERY: scriptEng.operands[i] = SCREEN_CENTERY; break;
-                    case VAR_SCREENSIZEX: scriptEng.operands[i] = SCREEN_XSIZE; break;
-                    case VAR_SCREENSIZEY: scriptEng.operands[i] = SCREEN_YSIZE; break;
+                    case VAR_TEMPVALUE8: ScriptEng.operands[i] = ScriptEng.tempValue[8]; break;
+                    case VAR_TEMPVALUE9: ScriptEng.operands[i] = ScriptEng.tempValue[9]; break;
+                    case VAR_TEMPVALUE10: ScriptEng.operands[i] = ScriptEng.tempValue[10]; break;
+                    case VAR_TEMPVALUE11: ScriptEng.operands[i] = ScriptEng.tempValue[11]; break;
+                    case VAR_TEMPVALUE12: ScriptEng.operands[i] = ScriptEng.tempValue[12]; break;
+                    case VAR_TEMPVALUE13: ScriptEng.operands[i] = ScriptEng.tempValue[13]; break;
+                    case VAR_TEMPVALUE14: ScriptEng.operands[i] = ScriptEng.tempValue[14]; break;
+                    case VAR_TEMPVALUE15: ScriptEng.operands[i] = ScriptEng.tempValue[15]; break;
+                    case VAR_TEMPVALUE16: ScriptEng.operands[i] = ScriptEng.tempValue[16]; break;
+                    case VAR_TEMPVALUE17: ScriptEng.operands[i] = ScriptEng.tempValue[17]; break;
+                    case VAR_TEMPVALUE18: ScriptEng.operands[i] = ScriptEng.tempValue[18]; break;
+                    case VAR_TEMPVALUE19: ScriptEng.operands[i] = ScriptEng.tempValue[19]; break;
+                    case VAR_TEMPVALUE20: ScriptEng.operands[i] = ScriptEng.tempValue[20]; break;
+                    case VAR_ARRAYPOS2: ScriptEng.operands[i] = ScriptEng.arrayPosition[2]; break;
+                    case VAR_ARRAYPOS3: ScriptEng.operands[i] = ScriptEng.arrayPosition[3]; break;
+                    case VAR_ARRAYPOS4: ScriptEng.operands[i] = ScriptEng.arrayPosition[4]; break;
+                    case VAR_ARRAYPOS5: ScriptEng.operands[i] = ScriptEng.arrayPosition[5]; break;
+                    case VAR_ARRAYPOS6: ScriptEng.operands[i] = ScriptEng.arrayPosition[6]; break;
+                    case VAR_ARRAYPOS7: ScriptEng.operands[i] = ScriptEng.arrayPosition[7]; break;
+                    case VAR_ARRAYPOS8: ScriptEng.operands[i] = ScriptEng.arrayPosition[8]; break;
+                    case VAR_ARRAYPOS9: ScriptEng.operands[i] = ScriptEng.arrayPosition[9]; break;
+                    case VAR_ARRAYPOS10: ScriptEng.operands[i] = ScriptEng.arrayPosition[10]; break;
+                    case VAR_ARRAYPOS11: ScriptEng.operands[i] = ScriptEng.arrayPosition[11]; break;
+                    case VAR_ARRAYPOS12: ScriptEng.operands[i] = ScriptEng.arrayPosition[12]; break;
+                    case VAR_ARRAYPOS13: ScriptEng.operands[i] = ScriptEng.arrayPosition[13]; break;
+                    case VAR_ARRAYPOS14: ScriptEng.operands[i] = ScriptEng.arrayPosition[14]; break;
+                    case VAR_ARRAYPOS15: ScriptEng.operands[i] = ScriptEng.arrayPosition[15]; break;
+                    case VAR_ARRAYPOS16: ScriptEng.operands[i] = ScriptEng.arrayPosition[16]; break;
+                    case VAR_ARRAYPOS17: ScriptEng.operands[i] = ScriptEng.arrayPosition[17]; break;
+                    case VAR_ARRAYPOS18: ScriptEng.operands[i] = ScriptEng.arrayPosition[18]; break;
+                    case VAR_ARRAYPOS19: ScriptEng.operands[i] = ScriptEng.arrayPosition[19]; break;
+                    case VAR_ARRAYPOS20: ScriptEng.operands[i] = ScriptEng.arrayPosition[20]; break;
+                    case VAR_SCREENCENTERX: ScriptEng.operands[i] = SCREEN_CENTERX; break;
+                    case VAR_SCREENCENTERY: ScriptEng.operands[i] = SCREEN_CENTERY; break;
+                    case VAR_SCREENSIZEX: ScriptEng.operands[i] = SCREEN_XSIZE; break;
+                    case VAR_SCREENSIZEY: ScriptEng.operands[i] = SCREEN_YSIZE; break;
                 }
             } else if (opcodeType == SCRIPTVAR_INTCONST) { // int constant
                 ScriptEng.operands[i] = ScriptData[scriptDataPtr++];
@@ -3119,89 +3119,89 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub) {
                         break;
                     case VAR_OBJECTOUTOFBOUNDS: break;
                     case VAR_OBJECTVALUE8: {
-                        objectEntityList[arrayVal].values[8] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[8] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE9: {
-                        objectEntityList[arrayVal].values[9] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[9] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE10: {
-                        objectEntityList[arrayVal].values[10] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[10] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE11: {
-                        objectEntityList[arrayVal].values[11] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[11] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE12: {
-                        objectEntityList[arrayVal].values[12] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[12] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE13: {
-                        objectEntityList[arrayVal].values[13] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[13] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE14: {
-                        objectEntityList[arrayVal].values[14] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[14] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE15: {
-                        objectEntityList[arrayVal].values[15] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[15] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE16: {
-                        objectEntityList[arrayVal].values[16] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[16] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE17: {
-                        objectEntityList[arrayVal].values[17] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[17] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE18: {
-                        objectEntityList[arrayVal].values[18] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[18] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE19: {
-                        objectEntityList[arrayVal].values[19] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[19] = ScriptEng.operands[i];
                         break;
                     }
                     case VAR_OBJECTVALUE20: {
-                        objectEntityList[arrayVal].values[20] = scriptEng.operands[i];
+                        ObjectEntityList[arrayVal].values[20] = ScriptEng.operands[i];
                         break;
                     }
-                    case VAR_TEMPVALUE8: scriptEng.tempValue[8] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE9: scriptEng.tempValue[9] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE10: scriptEng.tempValue[10] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE11: scriptEng.tempValue[11] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE12: scriptEng.tempValue[12] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE13: scriptEng.tempValue[13] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE14: scriptEng.tempValue[14] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE15: scriptEng.tempValue[15] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE16: scriptEng.tempValue[16] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE17: scriptEng.tempValue[17] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE18: scriptEng.tempValue[18] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE19: scriptEng.tempValue[19] = scriptEng.operands[i]; break;
-                    case VAR_TEMPVALUE20: scriptEng.tempValue[20] = scriptEng.operands[i]; break;
-					case VAR_ARRAYPOS2: scriptEng.arrayPosition[2] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS3: scriptEng.arrayPosition[3] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS4: scriptEng.arrayPosition[4] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS5: scriptEng.arrayPosition[5] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS6: scriptEng.arrayPosition[6] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS7: scriptEng.arrayPosition[7] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS8: scriptEng.arrayPosition[8] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS9: scriptEng.arrayPosition[9] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS10: scriptEng.arrayPosition[10] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS11: scriptEng.arrayPosition[11] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS12: scriptEng.arrayPosition[12] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS13: scriptEng.arrayPosition[13] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS14: scriptEng.arrayPosition[14] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS15: scriptEng.arrayPosition[15] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS16: scriptEng.arrayPosition[16] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS17: scriptEng.arrayPosition[17] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS18: scriptEng.arrayPosition[18] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS19: scriptEng.arrayPosition[19] = scriptEng.operands[i]; break;
-                    case VAR_ARRAYPOS20: scriptEng.arrayPosition[20] = scriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE8: ScriptEng.tempValue[8] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE9: ScriptEng.tempValue[9] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE10: ScriptEng.tempValue[10] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE11: ScriptEng.tempValue[11] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE12: ScriptEng.tempValue[12] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE13: ScriptEng.tempValue[13] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE14: ScriptEng.tempValue[14] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE15: ScriptEng.tempValue[15] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE16: ScriptEng.tempValue[16] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE17: ScriptEng.tempValue[17] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE18: ScriptEng.tempValue[18] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE19: ScriptEng.tempValue[19] = ScriptEng.operands[i]; break;
+                    case VAR_TEMPVALUE20: ScriptEng.tempValue[20] = ScriptEng.operands[i]; break;
+					case VAR_ARRAYPOS2: ScriptEng.arrayPosition[2] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS3: ScriptEng.arrayPosition[3] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS4: ScriptEng.arrayPosition[4] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS5: ScriptEng.arrayPosition[5] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS6: ScriptEng.arrayPosition[6] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS7: ScriptEng.arrayPosition[7] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS8: ScriptEng.arrayPosition[8] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS9: ScriptEng.arrayPosition[9] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS10: ScriptEng.arrayPosition[10] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS11: ScriptEng.arrayPosition[11] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS12: ScriptEng.arrayPosition[12] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS13: ScriptEng.arrayPosition[13] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS14: ScriptEng.arrayPosition[14] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS15: ScriptEng.arrayPosition[15] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS16: ScriptEng.arrayPosition[16] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS17: ScriptEng.arrayPosition[17] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS18: ScriptEng.arrayPosition[18] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS19: ScriptEng.arrayPosition[19] = ScriptEng.operands[i]; break;
+                    case VAR_ARRAYPOS20: ScriptEng.arrayPosition[20] = ScriptEng.operands[i]; break;
                     case VAR_SCREENCENTERX: break;
                     case VAR_SCREENCENTERY: break;
                     case VAR_SCREENSIZEX: break;
