@@ -6,13 +6,18 @@
 
 // Setting this to true removes (almost) ALL changes from the original code, the trade off is that a playable game cannot be built, it is advised to
 // be set to true only for preservation purposes
+#ifndef RETRO_USE_ORIGINAL_CODE
 #define RETRO_USE_ORIGINAL_CODE (0)
-#define RETRO_USE_MOD_LOADER    (0)
+#endif
+
+#ifndef RETRO_USE_MOD_LOADER
+#define RETRO_USE_MOD_LOADER (0)
+#endif
 
 #if !RETRO_USE_ORIGINAL_CODE
 #undef RETRO_USE_MOD_LOADER
 #define RETRO_USE_MOD_LOADER (1)
-#endif //  !RETRO_USE_ORIGINAL_CODE
+#endif
 
 // ================
 // STANDARD LIBS
@@ -38,7 +43,7 @@ typedef unsigned int uint;
 #define RETRO_ANDROID  (5)
 #define RETRO_WP7      (6)
 // Custom Platforms start here
-#define RETRO_UWP  (7)
+#define RETRO_UWP (7)
 
 // Platform types (Game manages platform-specific code such as HUD position using this rather than the above)
 #define RETRO_STANDARD (0)
@@ -78,15 +83,14 @@ typedef unsigned int uint;
 #define DEFAULT_SCREEN_XSIZE 320
 #define DEFAULT_FULLSCREEN   false
 #else
-#define BASE_PATH            ""
+#define BASE_PATH ""
 #define RETRO_USING_MOUSE
 #define RETRO_USING_TOUCH
 #define DEFAULT_SCREEN_XSIZE 320
 #define DEFAULT_FULLSCREEN   false
 #endif
 
-#if RETRO_PLATFORM == RETRO_WIN || RETRO_PLATFORM == RETRO_OSX || RETRO_PLATFORM == RETRO_iOS                        \
-    || RETRO_PLATFORM == RETRO_UWP
+#if RETRO_PLATFORM == RETRO_WIN || RETRO_PLATFORM == RETRO_OSX || RETRO_PLATFORM == RETRO_iOS || RETRO_PLATFORM == RETRO_UWP
 #define RETRO_USING_SDL1 (0)
 #define RETRO_USING_SDL2 (1)
 #else // Since its an else & not an elif these platforms probably aren't supported yet
@@ -94,18 +98,11 @@ typedef unsigned int uint;
 #define RETRO_USING_SDL2 (0)
 #endif
 
-enum RetroLanguages { RETRO_EN = 0, RETRO_FR = 1, RETRO_IT = 2, RETRO_DE = 3, RETRO_ES = 4, RETRO_JP = 5 };
-
 enum RetroStates {
-    ENGINE_SYSMENU         = 0,
-    ENGINE_MAINGAME        = 1,
-    ENGINE_INITSYSMENU     = 2,
-    ENGINE_EXITGAME        = 3,
-};
-
-enum RetroBytecodeFormat {
-    BYTECODE_MOBILE = 0,
-    BYTECODE_PC     = 1,
+    ENGINE_SYSMENU     = 0,
+    ENGINE_MAINGAME    = 1,
+    ENGINE_INITSYSMENU = 2,
+    ENGINE_EXITGAME    = 3,
 };
 
 // General Defines
@@ -154,25 +151,23 @@ extern bool engineDebugMode;
 #include "Video.hpp"
 #include "Userdata.hpp"
 #include "Debug.hpp"
+#include "ModAPI.hpp"
 
-class RetroEngine
-{
+class RetroEngine {
 public:
-    RetroEngine()
-    {
-    }
+    RetroEngine() {}
 
-    bool usingBinFile      = false;
+    bool UseBinFile         = false;
     bool usingDataFileStore = false;
     bool forceFolder        = false;
 
     char dataFile[0x80];
 
     bool initialised = false;
-    bool running     = false;
+    bool GameRunning     = false;
 
-    int gameMode     = 1;
-    byte colourMode = 1; //16-bit
+    int GameMode    = ENGINE_MAINGAME;
+    byte ColourMode = 1; // 16-bit
 
     int frameSkipSetting = 0;
     int frameSkipTimer   = 0;
@@ -198,10 +193,10 @@ public:
 
     bool LoadGameConfig(const char *Filepath);
 
-    char gameWindowText[0x40];
-    char gameDescriptionText[0x100];
+    char GameWindowText[0x40];
+    char GameDescriptionText[0x100];
 
-    byte *pixelBuffer   = nullptr;
+    byte *FrameBuffer = nullptr;
 
     bool isFullScreen = false;
 
