@@ -7,10 +7,6 @@ option(RETRO_MOD_LOADER "Enables or disables the mod loader." ON)
 
 set(RETRO_SDL_VERSION 2 CACHE STRING "Select between SDL2 and SDL1, defaults to SDL2")
 
-if(RETRO_ORIGINAL_CODE)
-    set(RETRO_MOD_LOADER OFF)
-endif()
-
 set(RETRO_NAME "Nexus")
 
 set(RETRO_OUTPUT_NAME ${RETRO_NAME} CACHE STRING "The exported name of the executable.")

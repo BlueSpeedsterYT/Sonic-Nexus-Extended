@@ -327,7 +327,8 @@ const FunctionInfo functions[] = { FunctionInfo("End", 0),
                                    FunctionInfo("LoadVideo", 1),
                                    FunctionInfo("NextVideoFrame", 0),
                                    FunctionInfo("PlayStageSfx", 2),
-                                   FunctionInfo("StopStageSfx", 1) };
+                                   FunctionInfo("StopStageSfx", 1),
+                                   FunctionInfo("CheckCurrentStageFolder", 1) };
 
 AliasInfo aliases[0x80] = {
     AliasInfo("true", "1"),          AliasInfo("false", "0"),       AliasInfo("FX_SCALE", "0"),
@@ -635,6 +636,7 @@ enum ScrFunction {
     FUNC_NEXTVIDEOFRAME,
     FUNC_PLAYSTAGESFX,
     FUNC_STOPSTAGESFX,
+    FUNC_CHECKCURRENTSTAGEFOLDER,
     FUNC_MAX_CNT
 };
 
@@ -2162,8 +2164,7 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub) {
                 break;
             }
             case FUNC_ATAN2: {
-                opcodeSize = 0;
-                // doesn't exist
+                ScriptEng.operands[0] = ArcTanLookup(ScriptEng.operands[1], ScriptEng.operands[2]);
                 break;
             }
             case FUNC_INTERPOLATE:
@@ -2711,6 +2712,10 @@ void ProcessScript(int scriptCodePtr, int jumpTablePtr, byte scriptSub) {
             case FUNC_STOPSTAGESFX:
                 opcodeSize = 0;
                 StopSfx(NoGlobalSFX + ScriptEng.operands[0]);
+                break;
+            case FUNC_CHECKCURRENTSTAGEFOLDER:
+                opcodeSize            = 0;
+                ScriptEng.checkResult = StrComp(stageList[ActiveStageList][StageListPosition].folder, ScriptText);
                 break;
         }
 

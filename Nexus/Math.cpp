@@ -35,4 +35,44 @@ void CalculateTrigAngles() {
         SinValue256[i] = (SinValue512[i * 2] >> 1);
         CosValue256[i] = (CosValue512[i * 2] >> 1);
     }
+    
+    for (int Y = 0; Y < 0x100; ++Y) {
+        byte *atan = (byte *)&ArcTanValue256[Y];
+        for (int X = 0; X < 0x100; ++X) {
+            float angle = atan2f(Y, X);
+            *atan       = (angle * 40.743664f);
+            atan += 0x100;
+        }
+    }
+}
+byte ArcTanLookup(int X, int Y)
+{
+    int x = 0;
+    int y = 0;
+
+    x = abs(X);
+    y = abs(Y);
+
+    if (x <= y) {
+        while (y > 0xFF) {
+            x >>= 4;
+            y >>= 4;
+        }
+    }
+    else {
+        while (x > 0xFF) {
+            x >>= 4;
+            y >>= 4;
+        }
+    }
+    if (X <= 0) {
+        if (Y <= 0)
+            return ArcTanValue256[(x << 8) + y] + -0x80;
+        else
+            return -0x80 - ArcTanValue256[(x << 8) + y];
+    }
+    else if (Y <= 0)
+        return -ArcTanValue256[(x << 8) + y];
+    else
+        return ArcTanValue256[(x << 8) + y];
 }

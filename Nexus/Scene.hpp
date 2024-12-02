@@ -66,6 +66,9 @@ enum DeformationModes {
 enum CameraStyles {
     CAMERASTYLE_FOLLOW,
     CAMERASTYLE_EXTENDED,
+    CAMERASTYLE_EXTENDED_OFFSET_L,
+    CAMERASTYLE_EXTENDED_OFFSET_R,
+    CAMERASTYLE_HLOCKED,
 };
 
 struct SceneInfo {
@@ -221,6 +224,7 @@ void LoadStageGIFFile(int stageID);
 void LoadStageGFXFile(int stageID);
 void SetPlayerScreenPosition(Player *player);
 void SetPlayerScreenPositionCDStyle(Player *player);
+void SetPlayerHLockedScreenPosition(Player *player);
 void SetPlayerLockedScreenPosition(Player *player);
 
 #endif // !SCENE_H

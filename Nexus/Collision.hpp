@@ -6,6 +6,7 @@ enum CollisionSidess {
     CSIDE_LWALL = 1,
     CSIDE_RWALL = 2,
     CSIDE_ROOF  = 3,
+    CSIDE_ENTITY = 4,
 };
 
 enum CollisionModes {
